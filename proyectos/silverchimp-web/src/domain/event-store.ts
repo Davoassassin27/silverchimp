@@ -67,22 +67,19 @@ export const useEventStore = create<EventStoreState>()(
   persist(
     (set, get) => ({
       events: [],
-      ready: false,
+      ready: true,
       setReady: (r) => set({ ready: r }),
       rehydrateFromStorage: async () => {
         try {
           const raw = await AsyncStorage.getItem(STORAGE_KEY);
-          if (!raw) {
-            set({ ready: true });
-            return;
-          }
+          if (!raw) return;
           const parsed = JSON.parse(raw);
           const list: Event[] = Array.isArray(parsed?.state?.events)
             ? parsed.state.events.map((e: unknown) => (e ? EventSchema.parse(e) : null)).filter(Boolean)
             : [];
-          set({ events: list, ready: true });
+          set({ events: list });
         } catch {
-          set({ ready: true });
+          /* no data to hydrate */
         }
       },
 
@@ -213,9 +210,6 @@ export const useEventStore = create<EventStoreState>()(
     {
       name: STORAGE_KEY,
       storage: createJSONStorage(() => AsyncStorage),
-      onRehydrateStorage: () => (state) => {
-        state?.setReady(true);
-      },
     }
   )
 );

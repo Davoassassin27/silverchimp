@@ -18,3 +18,7 @@ cf-tunnel.log
 lt-stderr.txt
 lt-stdout.txt
 *.log
+proyectos/powerlifting-tracker/
+proyectos/silverchimp-recap/
+proyectos/silverchimp-web/node_modules/
+proyectos/silverchimp-web/.expo/

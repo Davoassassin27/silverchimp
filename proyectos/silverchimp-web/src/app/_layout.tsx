@@ -1,13 +1,11 @@
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
-import { useColorScheme } from 'react-native';
+import { Platform, useColorScheme } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { useEventStore } from '@/domain/event-store';
 import { Colors } from '@/constants/theme';
-
-SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
@@ -15,11 +13,13 @@ export default function RootLayout() {
   const rehydrate = useEventStore((s) => s.rehydrateFromStorage);
 
   useEffect(() => {
-    async function run() {
-      await rehydrate();
-      await SplashScreen.hideAsync();
+    if (Platform.OS === 'web') {
+      const s = document.createElement('style');
+      s.textContent = 'body{overflow-y:auto!important}#root{justify-content:center;display:flex}#root>div{max-width:480px;width:100%}';
+      document.head.appendChild(s);
     }
-    run();
+    rehydrate();
+    SplashScreen.hideAsync();
   }, [rehydrate]);
 
   const palette = isDark ? Colors.dark : Colors.light;
