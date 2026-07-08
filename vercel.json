@@ -1,9 +1,0 @@
-{
-  "version": 2,
-  "rootDirectory": "silverchimp-web",
-  "buildCommand": null,
-  "outputDirectory": ".",
-  "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
-  ]
-}
