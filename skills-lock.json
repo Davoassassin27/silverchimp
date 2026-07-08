@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "skills": {
+    "data-science-python-stack": {
+      "source": "probabl-ai/skills",
+      "sourceType": "github",
+      "skillPath": "skills/data-science-python-stack/SKILL.md",
+      "computedHash": "b14cf1ea162c3e642b55f2b060f22a8c4938a6e7aeaa69b91a1101518681409c"
+    },
+    "design-system": {
+      "source": "akillness/oh-my-skills",
+      "sourceType": "github",
+      "skillPath": ".agent-skills/design-system/SKILL.md",
+      "computedHash": "cef21a59c5ec0aaa0f74af98695a5b63d8fc015a2f9c22cacbad1914701192bb"
+    },
+    "expo-react-native-performance": {
+      "source": "pproenca/dot-skills",
+      "sourceType": "github",
+      "skillPath": "skills/.experimental/expo-react-native-performance/SKILL.md",
+      "computedHash": "84100681c79072fd1920304b8b15551e885eb5004385d96f70d19e8500731954"
+    },
+    "expo-react-native-typescript": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "expo-react-native-typescript/SKILL.md",
+      "computedHash": "ae6a3db1d4b800bf9d69e64600bbdccadbacd22b127feeb71a041c56ad4f1e55"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "computedHash": "781bd6d3f9b19f8c9af6b53d8d0e4876d0183841b565db34ca7092ffa412d111"
+    },
+    "health": {
+      "source": "tw93/waza",
+      "sourceType": "github",
+      "skillPath": "skills/health/SKILL.md",
+      "computedHash": "6df5d2a6eee286f85c65ceda5a5cd877c28dcd60c7a574dd74240d2c53eaf1aa"
+    },
+    "mobile-offline-support": {
+      "source": "aj-geddes/useful-ai-prompts",
+      "sourceType": "github",
+      "skillPath": "skills/mobile-offline-support/SKILL.md",
+      "computedHash": "c0025f471485833eca5ddc516c7e87484b1317bc1c2c7416fb3837246359ad9d"
+    },
+    "remotion-best-practices": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion/SKILL.md",
+      "computedHash": "664bd31140897056bd575ef57a15f22f517bd576c6b81df429c1f4ed6453e312"
+    }
+  }
+}
